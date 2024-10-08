@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile topup</title>
+    <link rel="stylesheet" href="qam.css">
+</head>
+<body>
+    <div class="container">
+        <h1>LUKU</h1>
+        <div id="userInfo"></div>
+        <form id="transactionForm">
+            <select id="network" required>
+                <option value="">luku</option>
+               
+            </select>
+            <input type="tel" id="RecipientNumber" placeholder="NAMBA YA MITA" required>
+            <input type="number" id="amount" placeholder="Amount" required>
+            <button id="openPopup">Enter PIN</button>
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close">×</span>
+                    <h2>Enter PIN</h2>
+                    <input type="password" placeholder="Enter your PIN">
+                    <button>Submit</button>
+                </div>
+            </div>
+            <a href="mainpage.html" style="color: blue;">Back to main page</a>.</p>
+
+        </form>
+        
+    </div>
+    <!--<script src="qam8.js"></script>-->
+
+    <script>
+       document.getElementById('openPopup').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'flex';
+});
+
+document.querySelector('.close').addEventListener('click', function() {
+    document.getElementById('popup').style.display = 'none';
+});
+
+    </script>
+</body>
+</html>

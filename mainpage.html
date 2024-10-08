@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Services</title>
+    <link rel="stylesheet" href="mainpage.css">
+    
+</head>
+
+<body>
+    <nav id="navbar">
+        <img src="PESAFASTER.png" alt="Logo">
+    </nav>
+    
+   
+    <!--- <div  class="header">
+        <h1>HUDUMA</h1>
+   --->
+    <div class="tab-content" id="Home">
+       
+        <div class="services-box">
+            <h1>HUDUMA</h1><br><br>
+            <div class="service">
+              <a href="sendmoney.html"><img src="transfer-money.png" alt="Money Transfer"></a>
+                <div class="service-name">Money Transfer</div>
+            </div>
+            <div class="service">
+             <a href="Tuma pesa.html"><img src="withdrawal.png" alt="Money Withdrawal"></a>
+                <div class="service-name">Money Withdrawal</div>
+            </div>
+            <div class="service">
+                <a href="mobile topup.html"><img src="mobile.png" alt="Mobile Top-Up"></a>
+                <div class="service-name">Mobile Top-Up</div>
+            </div>
+        </div>
+
+
+        <div class="services-box">
+            <div class="service">
+               <a href="lipiabill.html"><img src="bill.png" alt="lipia bill"></a>
+                <div class="service-name">Lipia billi</div>
+            </div>
+            <div class="service">
+             <a href="banktransfer.html"><img src="bank.png" alt="Money Withdrawal"></a>
+                <div class="service-name">Hamisha kwenda banki</div>
+            </div>
+            <div class="service">
+                <a href="luku.html"><img src="lightbulb.png" alt="Mobile Top-Up"></a>
+                <div class="service-name">Umeme(luku)</div>
+            </div>
+            <div class="service">
+                <img src="governance.png" alt="Mobile Top-Up">
+                <div class="service-name">malipo ya serikali</div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="tab-content" id="TumaPesa" style="display:none;">
+        <div class="container">
+            <h1>TumaPesa</h1>
+            <div id="userInfo"></div>
+            <form id="transactionForm">
+                <select id="network" required>
+                    <option value="">Select Network</option>
+                    <option value="tigo">Tigo</option>
+                    <option value="vodacom">Vodacom</option>
+                    <option value="airtel">Airtel</option>
+                    <option value="halotel">Halotel</option>
+                    <option value="ttcl">TTCL</option>
+                    <option value="azampesa">Azam Pesa</option>
+                </select>
+                <input type="tel" id="Agent Number" placeholder="Recipient Number" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button type="submit">Send Money</button>
+       
+    </div>
+    </div>
+
+    <div class="tab-content" id="ToaPesa" style="display:none;">
+        <div class="container">
+            <h1>ToaPesa</h1>
+            <div id="userInfo"></div>
+            <form id="transactionForm">
+                <select id="network" required>
+                    <option value="">Select Network</option>
+                    <option value="tigo">Tigo</option>
+                    <option value="vodacom">Vodacom</option>
+                    <option value="airtel">Airtel</option>
+                    <option value="halotel">Halotel</option>
+                    <option value="ttcl">TTCL</option>
+                    <option value="azampesa">Azam Pesa</option>
+                </select>
+                <input type="tel" id="Agent Number" placeholder="Agent Number" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <button type="submit">ToaPesa</button>
+            </form>
+            
+        </div>
+            
+    </div>
+    
+    <div class="tab-content" id="MsaadaZaid" style="display:none;">
+      
+        <div class="services-box">
+            <h1>HUDUMA KWA WATEJA</h1>
+            <p>hello  this is a border box design by me</p>  
+            <p>For information please contact with us. via 0694832218</p>
+       </div>
+    </div>
+
+    <div class="tab-content" id="Settings" style="display:none;">
+        <h3>Tab 3</h3>
+        <p>This is the content of Tab 3.</p>
+    </div>
+
+
+
+
+
+
+    <div class="tab-container">
+        <div class="tab">
+            <button class="tab-button active" onclick="openTab(event, 'Home')"><img src="home.png"
+                    alt="home">Home</button>
+            <button class="tab-button" onclick="openTab(event, 'TumaPesa')"><img src="send-money.png"
+                    alt="TumaPesa">TumaPesa</button>
+            <button class="tab-button" onclick="openTab(event, 'ToaPesa')"><img src="withdrawal.png"
+                    alt="withdrawal">ToaPesa</button>
+            <button class="tab-button" onclick="openTab(event, 'MsaadaZaid')"><img src="customer-care.png"
+                    alt="customer-care">MsaadaZaid</button>
+            <button class="tab-button" onclick="openTab(event, 'Settings')"><img src="settings.png"
+                    alt="settings">Settings</button>
+        </div>
+    </div>
+
+   
+   
+    <script src="main.js">
+
+    </script>
+
+    <script>
+        function openTab(event, tabName) {
+            var i, tabcontent, tabbuttons;
+
+            // Hide all tab contents
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the active class from all tab buttons
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].className = tabbuttons[i].className.replace(" active", "");
+            }
+
+            // Show the current tab and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+
+</body>
+
+</html>
